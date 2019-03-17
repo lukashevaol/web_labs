@@ -1,0 +1,15 @@
+@media only screen and (min-width: 1000px) {
+}
+
+
+@media only screen and (min-width: 822px) and (max-width: 1100px) {
+	.all-content {
+		max-width: 800px;
+	}
+}
+
+@media only screen and (max-width: 822px) {
+	.site-main-menu {
+		display: none;
+	}
+}
