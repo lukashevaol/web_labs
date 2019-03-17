@@ -82,6 +82,7 @@ h4{
 
 .hero-area {
     border: 4px solid #E4E4E4;
+    min-width: 190px;
 }
 
 .hero-area-bg {
