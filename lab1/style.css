@@ -98,6 +98,7 @@ h4{
     position: absolute;
     left: 50%;
     top: 50%;
+    line-height: 1.0;
 }
 
 .hero-area-content a{
@@ -139,7 +140,7 @@ h4{
     height: auto;
 }
 
-.image-post a{
+.album-name {
     font-size: 14px;
     letter-spacing: 2.0px;
 }
