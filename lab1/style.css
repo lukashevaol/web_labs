@@ -1,35 +1,24 @@
 body{
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
     font-size: 15px;
     line-height: 2.0;
-    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
     color: #525252;
     background: #F3F3F3;
-    margin: 0 70px;
+    margin: 0 30px;
 }
 
-p{
-    font-size: 15px;
-    line-height: 2.0;
-    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-    color: #525252;
-    margin: 0;
-    padding: 0;
-}
 
 ul{
-    margin: 0;
-    padding: 0;
     list-style: none;
 }
 
 a{
     text-decoration: none;
     color: #525252;
-    padding: 11px 21px;
+    padding: 0;
     font-size: 13px;
     text-transform: uppercase;
-    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-    letter-spacing: 2.2px;
+    letter-spacing: 2.3px;
 }
 
 a:hover{
@@ -37,12 +26,27 @@ a:hover{
     color: #F7AF6C;
 }
 
-.site-logo {
-    text-align: center;
+p{
+    font-size: 15px;
+    line-height: 2.0;
+    color: #525252;
+    margin: 0;
+    padding: 0;
+}
+
+h4{
+    font-size: 16px;
+    color: #525252;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 .site-logo img {
-    width: 500px;
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .header-top {
@@ -53,16 +57,23 @@ a:hover{
 
 .site-main-menu{
     border: 4px solid #E4E4E4;
-    position: relative;
     text-align: center;
-    margin-bottom: 0;
 }
 
+.site-main-menu ul {
+    margin: 0;
+    padding: 0;
+}
 
 .site-main-menu ul li{
     display: inline-block;
     position: relative;
 }
+
+.site-main-menu ul li a{
+    padding: 16px 26px;
+}
+
 
 .hero-area {
     border: 4px solid #E4E4E4;
@@ -74,8 +85,7 @@ a:hover{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 550px;
-    text-align: center;
+    height: 500px;
     position: relative;
 }
 
@@ -83,53 +93,75 @@ a:hover{
     position: absolute;
     left: 50%;
     top: 50%;
-    text-align: center;
 }
 
 .hero-area-content a{
-    text-decoration: none;
-    color: #F7AF6C;
-    opacity: 0.8;
+    color: #d47e2e;
     font-size: 14px;
-    text-transform: uppercase;
-    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
     letter-spacing: 3.0px;
+    font-weight: 300;
 }
 
 .hero-area-content a:hover{
-    text-decoration: none;
-    color: #F7AF6C;
-    opacity: 1;
+    color: #fff;
+    opacity: 0.8;
 }
 
-.posts {
+.posts-boxes {   
     border: 4px solid #E4E4E4;
-    text-align: center;
 }
 
-.single-featured-box {
+.single-box {
     display: inline-block;
-    position: relative;
     height: 180px;
     width: 190px;
     min-width: 33%;
     overflow: hidden;
+    text-align: center;
 }
 
+/*для самого узкого single box можно сделать вот так*/
+/*  display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+*/
 
-.featurd-post-image img{
+.image-post img{
     width: 100%;
     height: auto;
 }
 
-.featurd-post-image a{
-    text-decoration: none;
-    color: #525252;
+.image-post a{
     font-size: 14px;
-    text-transform: uppercase;
-    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
     letter-spacing: 2.0px;
-    text-align: center;
 }
 
 
+.blog-post {
+    padding: 20px;
+    line-height: 24px;
+    min-height: 180px;
+}
+
+.blog-post h4 a:hover {
+    color: #E79E5A;
+}
+
+
+.post-title {
+    display: inline-block;
+    color: #fff;
+    font-size: 9px;
+    background: #F3AE76;
+    padding: 0 8px;
+    margin-bottom: 9px;
+}
+
+.post-title:hover {
+    color: #fff;
+}
+
+
+.album-name {
+    font-weight: 500;
+}
