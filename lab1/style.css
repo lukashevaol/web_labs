@@ -58,11 +58,13 @@ h4{
     border: 4px solid #E4E4E4;
     margin-top: 40px;
     background: #fff;
+    min-width: 190px;
 }
 
 .site-main-menu{
     border: 4px solid #E4E4E4;
     text-align: center;
+    min-width: 190px;
 }
 
 .site-main-menu ul {
@@ -78,7 +80,6 @@ h4{
 .site-main-menu ul li a{
     padding: 16px 26px;
 }
-
 
 .hero-area {
     border: 4px solid #E4E4E4;
