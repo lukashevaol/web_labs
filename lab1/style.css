@@ -55,14 +55,13 @@ h4{
 }
 
 .header-top {
-    border: 4px solid #E4E4E4;
+    border-bottom: 1px solid #E4E4E4;
     margin-top: 40px;
     background: #fff;
     min-width: 190px;
 }
 
 .site-main-menu{
-    border: 4px solid #E4E4E4;
     text-align: center;
     min-width: 190px;
 }
@@ -73,6 +72,7 @@ h4{
 }
 
 .site-main-menu ul li{
+    border-bottom: 1px solid #E4E4E4;
     display: inline-block;
     position: relative;
 }
@@ -82,7 +82,6 @@ h4{
 }
 
 .hero-area {
-    border: 4px solid #E4E4E4;
     min-width: 190px;
 }
 
@@ -116,7 +115,7 @@ h4{
 }
 
 .posts-boxes {   
-    border: 4px solid #E4E4E4;
+/*    border: 4px solid #E4E4E4;*/
     text-align: center;
 }
 
@@ -131,11 +130,6 @@ h4{
     margin-right: -0.15em;
 }
 
-/*для самого узкого single box можно сделать вот так*/
-/*  display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-*/
 
 .image-post img{
     width: 100%;
@@ -147,11 +141,9 @@ h4{
     letter-spacing: 2.0px;
 }
 
-
 .blog-post {
     padding: 20px;
     line-height: 24px;
-    min-height: 180px;
 }
 
 .blog-post h4 a:hover {
