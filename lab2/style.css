@@ -1,0 +1,10 @@
+@media only screen and (max-width: 320px) {
+	#welcome {
+		font-size: 2.5rem;
+	}
+
+	#call-to {
+		font-size: 0.9rem;
+		padding: .3rem 0.2rem;
+	}
+}
