@@ -29,6 +29,7 @@ function getRandomInt(min, max) {
 
 $.ajax({
   url: "https://api.forismatic.com/api/1.0/",
+  type: 'POST',
   jsonp: "jsonp",
   dataType: "jsonp",
   data: {
@@ -37,7 +38,12 @@ $.ajax({
     format: "jsonp"
   }
 })
-.done(doNext);
+.done(doNext)
+.fail(handleError);
+
+function handleErr(jqxhr, textStatus, err) {
+  document.write("Request Failed: " + textStatus + ", " + err);
+}
 
 function doNext(response) {
 
