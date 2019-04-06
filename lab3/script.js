@@ -62,17 +62,17 @@ function doNext(response) {
   x = getRandomInt(180, 220);
   y = getRandomInt(180, 220);
 
-  pic1.src = 'https://source.unsplash.com/collection/1127163/330x220';
+  pic1.src = 'https://source.unsplash.com/collection/494263/330x220';
   pic1.onload = function() { 
-    ctx.drawImage(pic1, 0, 0);
-    pic2.src = 'https://source.unsplash.com/collection/1127160/330x220';
+    pic2.src = 'https://source.unsplash.com/collection/583479/330x220';
     pic2.onload = function() {
-      ctx.drawImage(pic2, x, 0);
-      pic3.src = 'https://source.unsplash.com/collection/1127155/330x220';
+      pic3.src = 'https://source.unsplash.com/collection/539527/330x220';
       pic3.onload = function() {
-        ctx.drawImage(pic3, 0, y);
-        pic4.src = 'https://source.unsplash.com/collection/1127353/330x220';
+        pic4.src = 'https://source.unsplash.com/collection/764827/330x220';
         pic4.onload = function() {
+          ctx.drawImage(pic1, 0, 0);
+          ctx.drawImage(pic2, x, 0);
+          ctx.drawImage(pic3, 0, y);
           ctx.drawImage(pic4, x, y);
           ctx.rect(0, 0, canvas.width, canvas.height);
           ctx.fillStyle = "rgba(0, 0, 0, 0.6)";
