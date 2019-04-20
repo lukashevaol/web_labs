@@ -1,5 +1,11 @@
 <!DOCTYPE HTML>
-  <html>  
+  <html>
+  	<head>
+			<style>
+				.error {color: #FF0000;}
+			</style>
+		</head> 
+
     <body>
 
     <?php
@@ -40,31 +46,36 @@
 
     ?>
 
-
+    <p><span class="error">* required field</span></p>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-      Name: <input type="text" name="name">
+      Name: <input type="text" name="name" value="<?php echo $name;?>">
       <span class="error">* <?php echo $nameErr;?></span>
       <br><br>
-      E-mail: <input type="text" name="email">
+      E-mail: <input type="text" name="email" value="<?php echo $email;?>">
       <span class="error">* <?php echo $emailErr;?></span>
       <br><br>
-      Headline: <input type="text" name="headline">
+      Headline: <input type="text" name="headline" value="<?php echo $headline;?>">
       <span class="error">* <?php echo $headlineErr;?></span>
       <br><br>
-      News Story: <textarea name="story" rows="5" cols="40"></textarea>
+      News Story: <textarea name="story" rows="5" cols="40" value="<?php echo $story;?>"></textarea>
       <span class="error">* <?php echo $storyErr;?></span>
       <br><br>
       <input type="submit" name="submit" value="Submit">  
     </form>
 
+
+
     <?php
-      echo $name;
-      echo "<br>";
-      echo $email;
-      echo "<br>";
-      echo $headline;
-      echo "<br>";
-      echo $story;
+			if( isset( $_POST['submit'] ) )
+      {
+    		echo $name;
+      	echo "<br>";
+      	echo $email;
+      	echo "<br>";
+      	echo $headline;
+      	echo "<br>";
+      	echo $story;
+    	}
     ?>
 
   </body>
