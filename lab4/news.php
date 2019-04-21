@@ -11,7 +11,7 @@
 <div class="header">
     <a href="news.php">News Portal</a>
     <div class="menu">
-      <a href="form1.php">Add news</a>
+      <a href="add.php">Add news</a>
       <a href="news.php?rights=admin">Admin</a>
     </div>
 </div>
