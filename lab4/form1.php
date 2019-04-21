@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
   <html>
   	<head>
-			<style>
-				.error {color: #FF0000;}
-			</style>
+  		<meta charset="utf-8">
+  		<title>Add News</title>
+  		<link rel="stylesheet" href="style.css">
 		</head> 
 
     <body>
@@ -45,21 +45,21 @@
       }
 
     ?>
-
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-      Name: <input type="text" name="name" value="<?php echo $name;?>">
+    <div class="header">Add news</div>
+    <form method="post" class="add_form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+      <p>Name: </p>
+      <input type="text" name="name">
       <span class="error">* <?php echo $nameErr;?></span>
-      <br><br>
-      E-mail: <input type="text" name="email" value="<?php echo $email;?>">
+      <p>E-mail: </p>
+      <input type="text" name="email">
       <span class="error">* <?php echo $emailErr;?></span>
-      <br><br>
-      Headline: <input type="text" name="headline" value="<?php echo $headline;?>">
+      <p>Headline: </p>
+      <input type="text" name="headline">
       <span class="error">* <?php echo $headlineErr;?></span>
-      <br><br>
-      News Story: <textarea name="story" rows="5" cols="40" value="<?php echo $story;?>"></textarea>
+      <p>News Story:</p> 
+      <textarea name="story" rows="5" cols="40"></textarea>
       <span class="error">* <?php echo $storyErr;?></span>
-      <br><br>
-      <input type="submit" name="submit" value="Submit">  
+      <p><input type="submit" name="submit" value="Submit" style="width: 100px;"</p>  
     </form>
 
 
@@ -90,11 +90,11 @@
 				if (!$link) {
     			die("Connection failed: " . mysqli_connect_error());
 				}
-				echo "Connected successfully";
-				$sql = ("INSERT INTO news (name, email, headline, story, timestamp) VALUES ('$name', '$email', '$headline', '$story', NOW())");
+				$sql = ("INSERT INTO news (name, email, headline, story, news_date) VALUES ('$name', '$email', '$headline', '$story', NOW())");
 
 				if (mysqli_query($link, $sql)) {
-    			echo "New record created successfully";
+    			echo "New record created successfully. In 5 secs you will be redirected to the main page";
+    			header("Refresh: 5; url=news.php");
 				} else {
     			echo "Error: " . mysqli_error($link);
 				}

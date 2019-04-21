@@ -7,6 +7,8 @@ body{
     margin: 0 30px;
 }
 
+.error {color: #FF0000;}
+
 .header {
 	text-transform: uppercase;
 	letter-spacing: 2.3px;
@@ -55,4 +57,26 @@ body{
 	font-size: 11px;
 	letter-spacing: 1.5px;
 	text-decoration: none;
+}
+
+.add_form{
+	margin-top: 10px;
+}
+
+input {
+	width: 300px;
+	font-size: 13px;
+	padding: 6px 0 4px 10px;
+	border: 1px solid #cecece;
+	background: #F6F6f6;
+	border-radius: 8px;
+}
+
+textarea {
+	background: #f6f6f6;
+	border: 1px solid #cecece;
+	border-radius: 8px 0 0 0;
+	padding: 8px 0 8px 10px;
+	width: 500px;
+	height: 200px;
 }

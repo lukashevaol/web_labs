@@ -45,7 +45,7 @@
     die("Connection failed: " . mysqli_connect_error());
   } 
 
-  $sql = ("SELECT id, name, email, headline, story, timestamp FROM news");
+  $sql = ("SELECT id, name, email, headline, story, news_date FROM news");
 
   if ($result = mysqli_query($link, $sql)) {
     if (mysqli_num_rows($result) > 0) {
@@ -58,7 +58,7 @@
         <? echo $row["headline"]; ?>
       </div>
 
-         <i><? echo $row["email"], " ", $row["timestamp"]; ?></i>
+         <i><? echo $row["email"], " ", $row["news_date"]; ?></i>
       <p><? echo $row["story"]; ?></p>
 
       <? if (isset($_GET["rights"])) {?>
@@ -112,7 +112,6 @@ if (isset($_GET["a"])) {
     header("Refresh: 0; url=news.php?rights=admin");
     echo "Record deleted successfully";
   } else {
-    header("Refresh: 0; url=news.php?rights=admin");
     echo "Error deleting record: " . mysqli_error($link);
   }
 
