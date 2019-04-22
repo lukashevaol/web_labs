@@ -25,7 +25,8 @@ function wrapTextTest(context, text, marginLeft, maxWidth, lineHeight) {
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+} 
+
 
 $.ajax({
   url: "https://api.forismatic.com/api/1.0/",
@@ -45,6 +46,12 @@ function handleErr(jqxhr, textStatus, err) {
   document.write("Request Failed: " + textStatus + ", " + err);
 }
 
+function handleButtonClick() {
+  alert("Вы нажали кнопку");
+}
+
+
+
 function doNext(response) {
 
   text = response.quoteText;
@@ -54,6 +61,21 @@ function doNext(response) {
   canvas.height = 400;
   document.body.appendChild(canvas);
 
+  var saveText = document.createElement("p");
+  saveText.innerText = "Save";
+
+  var saveButton = document.createElement("button");
+  saveButton.appendChild(saveText);
+
+  var saveButtonLinkWrapper = document.createElement("a");
+  saveButtonLinkWrapper.setAttribute("id", "download");
+  saveButtonLinkWrapper.setAttribute("download", "collage.jpg");
+  saveButtonLinkWrapper.setAttribute("href", "");
+  saveButtonLinkWrapper.appendChild(saveButton);
+
+  var body = document.body;
+  body.appendChild(saveButtonLinkWrapper);
+
   ctx = canvas.getContext('2d');
 
   pic1 = new Image();
@@ -61,11 +83,17 @@ function doNext(response) {
   pic3 = new Image();
   pic4 = new Image();
 
+  pic1.crossOrigin="anonymous";
+  pic2.crossOrigin="anonymous";
+  pic3.crossOrigin="anonymous";
+  pic4.crossOrigin="anonymous";
+
+
   var maxTextWidth = 300;
   var lineHeightText = 20;
   var marginLeftText = 200;
 
-  x = getRandomInt(180, 220);
+  x = getRandomInt(160, 240);
   y = getRandomInt(180, 220);
 
   pic1.src = 'https://source.unsplash.com/collection/494263/330x220';
@@ -87,7 +115,10 @@ function doNext(response) {
           textBaseline = "middle";
           ctx.font = "18px 'Montserrat', Helvetica, Verdana, sans-serif";
           ctx.fillStyle = "white";
-          wrapTextTest(ctx, text, marginLeftText, maxTextWidth, lineHeightText);    
+          wrapTextTest(ctx, text, marginLeftText, maxTextWidth, lineHeightText);
+          
+          resultImage = canvas.toDataURL("image/jpg");
+          saveButtonLinkWrapper.href = resultImage;
         }
       }
     }
