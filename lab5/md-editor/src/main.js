@@ -3,8 +3,11 @@ import App from './App.vue'
 import router from './router'
 import 'D:\\универ\\web2019\\web_labs\\lab5\\md-editor\\src\\plugins\\bootstrap'
 
+Vue.config.productionTip = false
+
 new Vue({
   el: '#app',
   router,
-  render: h => h(App)
+  template: '<App/>',
+  components: { App }
 })

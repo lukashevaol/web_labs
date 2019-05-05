@@ -7,7 +7,8 @@ const config = require('./config/config')
 const app = express()
 
 app.use(morgan('combined'))
-app.use(bodyParser.json())
+app.use(express.json());
+app.use(express.urlencoded());
 app.use(cors())
 
 app.listen(process.env.PORT || config.port,
