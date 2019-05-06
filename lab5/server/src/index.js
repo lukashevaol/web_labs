@@ -12,7 +12,7 @@ mongoose.Promise = global.Promise
 app.use(morgan('combined'))
 app.use(bodyParser.json())
 app.use(cors())
-app.use(require('D:\\универ\\web2019\\web_labs\\lab5\\server\\src\\routes\\posts'))
+app.use(require('./routes/posts'))
 
 mongoose.connect(config.dbURL, config.dbOptions)
 mongoose.connection
